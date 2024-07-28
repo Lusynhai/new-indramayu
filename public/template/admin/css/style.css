@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Playfair+Display:wght@400;700&family=Dancing+Script:wght@400;700&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+}
+
+.content h1 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 2.5rem;
+    color: #444;
+}
+
+.content p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.2rem;
+    color: #555;
+}
+
+.hr-style {
+    width: 50px;
+    border-top: 2px solid #444;
+}
+
+.content {
+    margin-bottom: 20px;
+}
+
+.d-flex {
+    min-height: 300px;
+    padding: 20px;
+}
