@@ -19,7 +19,7 @@
                     <div class="card-footer pd-y-15 pd-x-20">
                         <div class="row row-sm">
                             <div class="col-6 col-sm-4 col-md-3 col-lg">
-                                <h4 class="tx-normal tx-rubik mg-b-10">{{ $jumlahAdat }}</h4>
+                                {{-- <h4 class="tx-normal tx-rubik mg-b-10">{{ $jumlahAdat }}</h4> --}}
                                 <div class="progress ht-2 mg-b-10">
                                     <!-- Progress bar for Adat -->
                                 </div>
@@ -27,7 +27,7 @@
                                 <p class="tx-10 tx-color-03 mg-b-0"><!-- Percentage or change --></p>
                             </div><!-- col -->
                             <div class="col-6 col-sm-4 col-md-3 col-lg">
-                                <h4 class="tx-normal tx-rubik mg-b-10">{{ $jumlahCagarBudaya }}</h4>
+                                {{-- <h4 class="tx-normal tx-rubik mg-b-10">{{ $jumlahCagarBudaya }}</h4> --}}
                                 <div class="progress ht-2 mg-b-10">
                                     <!-- Progress bar for Cagar Budaya -->
                                 </div>
@@ -35,7 +35,7 @@
                                 <p class="tx-10 tx-color-03 mg-b-0"><!-- Percentage or change --></p>
                             </div><!-- col -->
                             <div class="col-6 col-sm-4 col-md-3 col-lg">
-                                <h4 class="tx-normal tx-rubik mg-b-10">{{ $jumlahRitus }}</h4>
+                                {{-- <h4 class="tx-normal tx-rubik mg-b-10">{{ $jumlahRitus }}</h4> --}}
                                 <div class="progress ht-2 mg-b-10">
                                     <!-- Progress bar for Ritus -->
                                 </div>
@@ -43,7 +43,7 @@
                                 <p class="tx-10 tx-color-03 mg-b-0"><!-- Percentage or change --></p>
                             </div><!-- col -->
                             <div class="col-6 col-sm-4 col-md-3 col-lg mg-t-20 mg-sm-t-0">
-                                <h4 class="tx-normal tx-rubik mg-b-10">{{ $jumlahKesenian }}</h4>
+                                {{-- <h4 class="tx-normal tx-rubik mg-b-10">{{ $jumlahKesenian }}</h4> --}}
                                 <div class="progress ht-2 mg-b-10">
                                     <!-- Progress bar for Kesenian -->
                                 </div>

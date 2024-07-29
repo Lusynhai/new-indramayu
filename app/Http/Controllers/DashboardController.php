@@ -12,11 +12,15 @@ class DashboardController extends Controller
 {
     public function index()
     {
-        $jumlahAdat = Adat::count();
-        $jumlahCagarBudaya = CagarBudaya::count();
-        $jumlahRitus = Ritus::count();
-        $jumlahKesenian = Kesenian::count();
+        
+        {
+            $jumlahAdat = Adat::count(); // Atau logika lain untuk mendapatkan jumlah adat
+            return view('dashboard', compact('jumlahAdat'));
+        }
+        // $jumlahCagarBudaya = CagarBudaya::count();
+        // $jumlahRitus = Ritus::count();
+        // $jumlahKesenian = Kesenian::count();
 
-        return view('admin.index', compact('jumlahAdat', 'jumlahCagarBudaya', 'jumlahRitus', 'jumlahKesenian'));
+        // return view('admin.index', compact('jumlahAdat', 'jumlahCagarBudaya', 'jumlahRitus', 'jumlahKesenian'));
     }
 }

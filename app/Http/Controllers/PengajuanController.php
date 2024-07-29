@@ -1,5 +1,4 @@
 <?php
-
 namespace App\Http\Controllers;
 
 use App\Models\Pengajuan;
@@ -13,6 +12,7 @@ use App\Mail\PengajuanStatusMail;
 
 class PengajuanController extends Controller
 {
+    // Masyarakat - Tidak memerlukan login
     public function indexMasyarakat()
     {
         $objek = Pengajuan::where('user_id', auth()->id())->get();
@@ -49,6 +49,7 @@ class PengajuanController extends Controller
         return redirect()->route('masyarakat.pengajuan.index')->with('success', 'Pengajuan berhasil diajukan.');
     }
 
+    // Admin - Memerlukan login
     public function indexAdmin()
     {
         $objek = Pengajuan::all();
