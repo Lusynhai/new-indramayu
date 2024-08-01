@@ -4,7 +4,19 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <title>@yield('title', 'Dinas Kebudayaan Indramayu')</title>
+    <title>@yield('title', 'Disbud Indramayu')</title>
+     {{-- <!-- Google Translate Widget -->
+    <div id="google_translate_element"></div>
+    <script type="text/javascript">
+      function googleTranslateElementInit() {
+        new google.translate.TranslateElement({
+          pageLanguage: 'id',
+          includedLanguages: 'en,fr,de,es,it,ja,ko,pt,zh-CN',
+          layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+        }, 'google_translate_element');
+      }
+    </script>
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script> --}}
 
     <!-- Bootstrap core CSS -->
     <link href="{{ asset('template/masyarakat/vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
@@ -15,7 +27,6 @@
     <link href="{{ asset('template/masyarakat/css/animate.css') }}" rel="stylesheet">
     <link href="{{ asset('template/masyarakat/css/custom.css') }}" rel="stylesheet">
     <link href="https://unpkg.com/swiper@7/swiper-bundle.min.css" rel="stylesheet">
-    {{-- <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet"> --}}
 </head>
 <body>
     <!-- Preloader -->
@@ -46,8 +57,6 @@
     <script src="{{ asset('template/masyarakat/js/counter.js') }}"></script>
     <script src="{{ asset('template/masyarakat/js/custom.js') }}"></script>
 
-    {{-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script> --}}
+   
 </body>
 </html>

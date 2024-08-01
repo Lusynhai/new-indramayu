@@ -19,4 +19,151 @@
         text-align: justify;
     }
 
+.bg-none {
+    background-color: transparent;
+}
+.card {
+    position: relative;
+    overflow: hidden;
+}
+.mt-4, .my-4{
+    margin-top: 1.5rem !important;
+}
+.boder {
+    border: 1px solid #D5DADD !important;
+}
+.card {
+    position: relative;
+    display: flex;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #F1F4F6;
+    background-clip: border-box;
+    border: 0 solid rgba(33, 33, 33, 0.1245);
+    border-radius: .5rem;
+}
+body {
+    margin: 0;
+    /* font-family: "Inter", sans-serif; */
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.4;
+    color: #212121;
+    text-align: left;
+    background-color: #fff;
+}
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+div {
+    display: block;
+    unicode-bidi: isolate;
+}
+
+.cultural_item {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.cultural_item a {
+    text-decoration: none;
+    color: #343a40;
+    margin-left: 8px; /* Spasi antara simbol dan teks */
+}
+
+.symbol {
+    display: inline-block;
+    width: 12px; /* Diameter simbol */
+    height: 12px; /* Diameter simbol */
+    border-radius: 50%; /* Membuat simbol bulat */
+    margin-right: 8px; /* Spasi antara simbol dan teks */
+}
+
+.adat {
+    background-color: red; /* Warna simbol untuk adat istiadat */
+}
+
+.cagar-budaya {
+    background-color: gray; /* Warna simbol untuk cagar budaya */
+}
+
+.ritus {
+    background: linear-gradient(to right, #ff0000, #ffff00); /* Warna simbol untuk ritus, campuran merah dan kuning */
+}
+
+.kesenian {
+    background-color: yellow; /* Warna simbol untuk kesenian */
+}
+
+.item {
+    padding: 20px;
+    background-color: #f8f9fa;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.item h4 {
+    margin-bottom: 10px;
+}
+
+.data-count {
+    font-size: 14px;
+    color: #6c757d; /* Warna teks untuk keterangan jumlah data */
+    margin-top: 5px;
+}
+
+/* Simbol bulat untuk adat istiadat */
+.symbol.adat {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: red; /* Warna simbol bulat untuk adat istiadat */
+    margin-right: 8px;
+}
+
+/* Simbol segitiga untuk penetapan tingkat nasional dan provinsi */
+.symbol.triangle {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+}
+
+.symbol.nasional {
+    border-bottom: 10px solid blue; /* Segitiga biru untuk nasional */
+    margin-right: 8px;
+}
+
+.symbol.provinsi {
+    border-bottom: 10px solid green; /* Segitiga hijau untuk provinsi */
+    margin-right: 8px;
+}
+
+/* Pembagian kategori */
+.item-details {
+    margin-top: 10px;
+    padding-left: 20px;
+}
+
+.category-section {
+    margin-bottom: 15px;
+}
+
+.category-section h5 {
+    margin-bottom: 10px;
+}
+
+.category-section ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.category-section li {
+    margin-bottom: 5px;
+}
 

@@ -1,7 +1,7 @@
 <?php
 namespace App\Http\Controllers;
 
-use App\Models\Adat;
+use App\Models\Tradisi;
 use App\Models\CagarBudaya;
 use App\Models\Ritus;
 use App\Models\Kesenian;
@@ -12,11 +12,10 @@ class MasyarakatController extends Controller
     public function index()
     {
         // dd('test');
-        $adats = Adat::all();
+        $tradisis = Tradisi::all();
         $cagarbudayas = Cagarbudaya::all();
-        $rituses = Ritus::all();
         $kesenians = Kesenian::all();
-        $data =['adats' => $adats, 'cagarbudayas'=> $cagarbudayas,  'rituses' => $rituses, 'kesenians' => $kesenians] ;
+        $data =['tradisis' => $tradisis, 'cagarbudayas'=> $cagarbudayas,  'kesenians' => $kesenians] ;
         return view('masyarakat.index', $data);
     }
     

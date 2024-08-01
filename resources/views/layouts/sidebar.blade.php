@@ -52,11 +52,10 @@
         <ul class="nav nav-aside">
             {{-- <li class="nav-label"><a href="{{ route('admin.index') }}"><span>Dashboard</span></a></li> --}}
             <li class="nav-label mg-t-25">Pages</li>
-            <li class="nav-item"><a href="{{ route('adats.index') }}" class="nav-link"><i data-feather="shopping-bag"></i> <span>Adat Istiadat</span></a></li>
-            <li class="nav-item"><a href="{{ route('cagarbudayas.index') }}" class="nav-link"><i data-feather="globe"></i> <span>Cagar Budaya</span></a></li>
-            <li class="nav-item"><a href="{{ route('rituses.index') }}" class="nav-link"><i data-feather="pie-chart"></i> <span>Ritus</span></a></li>
+            <li class="nav-item"><a href="{{ route('tradisis.index') }}" class="nav-link"><i data-feather="shopping-bag"></i> <span>Sejarah/Tradisi</span></a></li>
+            {{-- <li class="nav-item"><a href="{{ route('cagarbudayas.index') }}" class="nav-link"><i data-feather="globe"></i> <span>Cagar Budaya</span></a></li> --}}
             <li class="nav-item"><a href="{{ route('kesenians.index') }}" class="nav-link"><i data-feather="life-buoy"></i> <span>Kesenian</span></a></li>
-            {{-- <li class="nav-item"><a href="{{ route('admin.pengajuans.index') }}" class="nav-link"><i data-feather="life-buoy"></i> <span>Pengajuan Objek Budaya</span></a></li> --}}
+            <li class="nav-item"><a href="{{ route('pengajuans.index') }}" class="nav-link"><i data-feather="life-buoy"></i> <span>Pengajuan Objek Budaya</span></a></li>
         </ul>
     </div>
 </aside>

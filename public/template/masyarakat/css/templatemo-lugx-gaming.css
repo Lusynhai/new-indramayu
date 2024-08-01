@@ -287,7 +287,7 @@ Header Style
 */
 
 .background-header {
-  background-color: #0071f8 !important;
+  background-color: #f80000 !important;
   border-radius: 0px 0px 25px 25px;
   height: 80px!important;
   position: fixed!important;
@@ -653,7 +653,7 @@ Banner Style
 */
 
 .main-banner {
-  background-image: url(../images/banner-bg.jpg);
+  background-image: url(../images/bg-1.jpg);
   border-radius: 0px 0px 150px 150px;
   background-position: center bottom;
   background-repeat: no-repeat;
@@ -730,7 +730,7 @@ Banner Style
 }
 
 .main-banner .caption form button:hover {
-  background-color: #0071f8;
+  background-color: #f80000;
 }
 
 .main-banner .right-image {
@@ -1115,10 +1115,10 @@ Footer Style
 
 footer {
   margin-top: 150px;
-  background-color: #0071f8;
+  background-color: #f80000;
   background-repeat: no-repeat;
   background-size: cover;
-  background-image: url(../images/footer-bg.jpg);
+  background-image: url(../images/bg-1.jpg);
   min-height: 150px;
   border-radius: 150px 150px 0px 0px;
 }

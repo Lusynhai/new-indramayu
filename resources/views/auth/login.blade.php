@@ -26,7 +26,7 @@
                             </div>
                             <button class="btn btn-block login-btn mb-4" type="submit">Login</button>
                         </form>
-                        <p class="login-card-footer-text">Don't have an account? <a href="{{ route('register') }}" class="text-reset">Register here</a></p>
+                        {{-- <p class="login-card-footer-text">Don't have an account? <a href="{{ route('register') }}" class="text-reset">Register here</a></p> --}}
                     </div>
                 </div>
             </div>

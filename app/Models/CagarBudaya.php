@@ -16,4 +16,13 @@ class CagarBudaya extends Model
     {
         return $this->hasMany(Galeri::class);
     }
+
+    public function nationalCategories()
+    {
+        return $this->belongsToMany(NationalCategory::class, 'national_category_cagar_budaya');
+    }
+    public function provinsiCategories()
+    {
+        return $this->belongsToMany(ProvinsiCategory::class, 'provinsi_category_cagar_budaya');
+    }
 }

@@ -43,27 +43,27 @@ class AuthController extends Controller
         return redirect('/');
     }
 
-    // Menampilkan form registrasi
-    public function showRegisterForm()
-    {
-        return view('auth.register');
-    }
+    // // Menampilkan form registrasi
+    // public function showRegisterForm()
+    // {
+    //     return view('auth.register');
+    // }
 
-    // Menangani proses registrasi
-    public function register(Request $request)
-    {
-        $request->validate([
-            'name' => 'required|string|max:255',
-            'email' => 'required|string|email|max:255|unique:users',
-            'password' => 'required|string|min:8|confirmed',
-        ]);
+    // // Menangani proses registrasi
+    // public function register(Request $request)
+    // {
+    //     $request->validate([
+    //         'name' => 'required|string|max:255',
+    //         'email' => 'required|string|email|max:255|unique:users',
+    //         'password' => 'required|string|min:8|confirmed',
+    //     ]);
 
-        User::create([
-            'name' => $request->name,
-            'email' => $request->email,
-            'password' => Hash::make($request->password),
-        ]);
+    //     User::create([
+    //         'name' => $request->name,
+    //         'email' => $request->email,
+    //         'password' => Hash::make($request->password),
+    //     ]);
 
-        return redirect()->route('login')->with('success', 'Registration successful. Please login.');
-    }
+    //     return redirect()->route('login')->with('success', 'Registration successful. Please login.');
+    // }
 }
