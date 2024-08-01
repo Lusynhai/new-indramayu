@@ -52,9 +52,9 @@
         <ul class="nav nav-aside">
             {{-- <li class="nav-label"><a href="{{ route('admin.index') }}"><span>Dashboard</span></a></li> --}}
             <li class="nav-label mg-t-25">Pages</li>
-            <li class="nav-item"><a href="{{ route('tradisis.index') }}" class="nav-link"><i data-feather="shopping-bag"></i> <span>Sejarah/Tradisi</span></a></li>
+            <li class="nav-item"><a href="{{ route('wbtbs.index') }}" class="nav-link"><i data-feather="shopping-bag"></i> <span>Warisan Budaya Tak Benda</span></a></li>
             {{-- <li class="nav-item"><a href="{{ route('cagarbudayas.index') }}" class="nav-link"><i data-feather="globe"></i> <span>Cagar Budaya</span></a></li> --}}
-            <li class="nav-item"><a href="{{ route('kesenians.index') }}" class="nav-link"><i data-feather="life-buoy"></i> <span>Kesenian</span></a></li>
+            {{-- <li class="nav-item"><a href="{{ route('kesenians.index') }}" class="nav-link"><i data-feather="life-buoy"></i> <span>Kesenian</span></a></li> --}}
             <li class="nav-item"><a href="{{ route('pengajuans.index') }}" class="nav-link"><i data-feather="life-buoy"></i> <span>Pengajuan Objek Budaya</span></a></li>
         </ul>
     </div>

@@ -41,7 +41,7 @@
         </div>
     </div>
 
-    @include('masyarakat.partials.header')
+    {{-- @include('masyarakat.partials.header') --}}
 
     <main>
         @yield('content')

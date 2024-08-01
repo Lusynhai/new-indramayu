@@ -26,112 +26,65 @@
             <div class="row">
                 <div class="col-lg-3 col-md-6">
                     <div class="item">
-                        <h4>Sejarah/Tradisi</h4>
-                        <p class="data-count">{{ count($tradisis) }} Data</p> <!-- Keterangan jumlah data -->
+                        <h4>WBTB Ditetapkan Secara Nasional</h4>
+                        <p class="data-count">{{ $wbtbs->where('status', 'Nasional')->count() }} Data</p>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <div class="item">
-                        <h4>Cagar Budaya</h4>
-                        <p class="data-count">{{ count($cagarbudayas) }} Data</p> <!-- Keterangan jumlah data -->
+                        <h4>WBTB Ditetapkan Secara Provinsi</h4>
+                        <p class="data-count">{{ $wbtbs->where('status', 'Provinsi')->count() }} Data</p>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <a href="#">
                         <div class="item">
-                            <h4>Kesenian</h4>
-                            <p class="data-count">{{ count($kesenians) }} Data</p> <!-- Keterangan jumlah data -->
+                            <h4>Pengajuan Objek Budaya</h4>
+                            <p class="data-count">{{ $wbtbs->where('status', 'Pengajuan')->count() }} Data</p>
                         </div>
                     </a>
                 </div>
-                {{-- <div class="col-lg-3 col-md-6">
-                    <a href="#">
-                        <div class="item">
-                            <h4>Pengajuan Objek Budaya</h4>
-                            <p class="data-count">{{ count($pengajuans) }} Data</p> <!-- Keterangan jumlah data -->
-                        </div>
-                    </a>
-                </div> --}}
             </div>
         </div>
     </div>
-    
     <div class="container mt-4">
         <div id="acc" class="card bg-none border">
             <div class="card-body">
                 <div class="category-section">
                     <h4 class="category-title">
-                        <a href="/en/statesparties/af" class="text-dark">Sejarah/Tradisi</a>
+                        <a href="#" class="text-dark">Warisan Budaya Tak Benda</a>
                     </h4>
                     <ul>
-                        @foreach ($tradisis as $tradisi)
+                        @foreach ($wbtbs as $wbtb)
                             <li class="cultural_item">
-                                <span class="symbol tradisi"></span> <!-- Simbol bulat untuk adat istiadat -->
-                                <a href="{{ route('masyarakat.tradisi.detail', $tradisi->id) }}">{{ $tradisi->nama }}</a>
+                                @if($wbtb->status == "Nasional")
                                 <div class="item-details">
-                                    {{-- <div class="category-section">
+                                    <div class="category-section">
                                         <h5>Penetapan Tingkat Nasional</h5>
                                         <ul class="national-category">
-                                            @foreach ($tradisi->nationalCategories as $nationalItem)
-                                                <li>
-                                                    <span class="symbol triangle nasional"></span> <!-- Simbol segitiga biru untuk nasional -->
-                                                    <a href="{{ route('masyarakat.tradisi.national.detail', $nationalItem->id) }}">{{ $nationalItem->nama }}</a>
-                                                </li>
-                                            @endforeach
+                                            <li>
+                                                <span class="symbol triangle nasional"></span>
+                                                <a href="{{ route('masyarakat.wbtb.detail', $wbtb->id) }}">{{ $wbtb->nama }}</a>
+                                            </li>
                                         </ul>
-                                    </div>  --}}
-                                    {{-- <div class="category-section">
+                                    </div> 
+                                    @elseif($wbtb->status == "Provinsi")
+                                    <div class="category-section">
                                         <h5>Penetapan Tingkat Provinsi</h5>
                                         <ul class="provinsi-category">
-                                            @foreach ($tradisi->provinsiCategories as $provinsiItem)
-                                                <li>
-                                                    <span class="symbol triangle provinsi"></span> <!-- Simbol segitiga hijau untuk provinsi -->
-                                                    <a href="{{ route('masyarakat.tradisi.detail', $provinsiItem->id) }}">{{ $provinsiItem->nama }}</a>
-                                                </li>
-                                            @endforeach
+                                            <li>
+                                                <span class="symbol triangle provinsi"></span>
+                                                <a href="{{ route('masyarakat.wbtb.detail', $wbtb->id) }}">{{ $wbtb->nama }}</a>
+                                            </li>
                                         </ul>
-                                    </div> --}}
+                                    </div> 
+                                    @endif
                                 </div>
                             </li>
                         @endforeach
                     </ul>
-                    
-                </div>
-                <div class="category-section">
-                    <h4 class="category-title">
-                        <a href="/en/statesparties/af" class="text-dark">Cagar Budaya</a>
-                    </h4>
-                    <div class="list_site">
-                        <ul>
-                            @foreach ($cagarbudayas as $cagarbudaya)
-                                <li class="cultural_item">
-                                    <span class="symbol cagar-budaya"></span> <!-- Simbol bulat untuk cagar budaya -->
-                                    <a href="{{ route('masyarakat.cagarbudaya.detail', $cagarbudaya->id) }}">{{ $cagarbudaya->nama }}</a>
-                                </li>
-                            @endforeach
-                        </ul>
-                    </div>
-                </div>
-                <div class="category-section">
-                    <h4 class="category-title">
-                        <a href="/en/statesparties/af" class="text-dark">Kesenian</a>
-                    </h4>
-                    <div class="list_site">
-                        <ul>
-                            @foreach ($kesenians as $kesenian)
-                                <li class="cultural_item">
-                                    <span class="symbol kesenian"></span> <!-- Simbol bulat untuk kesenian -->
-                                    <a href="{{ route('masyarakat.kesenian.detail', $kesenian->id) }}">{{ $kesenian->nama }}</a>
-                                </li>
-                            @endforeach
-                        </ul>
-                    </div>
-                </div>
+                </div> 
             </div>
         </div>
     </div>
-    
-    
-    
-    
 @endsection
