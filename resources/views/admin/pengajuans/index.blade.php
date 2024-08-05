@@ -34,52 +34,49 @@
                                 <th>Aksi</th>
                             </tr>
                         </tfoot>
-                        </tbody>
-                        @foreach ($objek as $row)
-                            <tr>
-                                <td>{{ $loop->iteration }}</td>
-                                <td>{{ $row->nama }}</td>
-                                <td>{{ $row->deskripsi }}</td>
-                                <td>
-                                    <span class="
-                                        @if ($row->status == 0)
-                                            bg-warning
-                                        @elseif ($row->status == 1)
-                                            bg-secondary
-                                        @elseif ($row->status == 2)
-                                            bg-success
-                                        @elseif ($row->status == 3)
-                                            bg-danger
-                                        @else
-                                            bg-light
-                                        @endif
-                                        text-white p-2 rounded
-                                    ">
-                                        @if ($row->status == 0)
-                                            Diajukan
-                                        @elseif ($row->status == 1)
-                                            Dicek
-                                        @elseif ($row->status == 2)
-                                            Diterima
-                                        @elseif ($row->status == 3)
-                                            Ditolak
-                                        @else
-                                            Tidak diketahui
-                                        @endif
-                                    </span>
-                                </td>                                
-                                <td>
-                                    {{-- <a href="{{ route('kesenians.show', $kesenian->id) }}" class="btn btn-info btn-sm">Detail</a> --}}
-                                    {{-- <a href="{{ route('kesenians.edit', $kesenian->id) }}" class="btn btn-warning btn-sm">Edit</a> --}}
-                                    {{-- <form action="{{ route('kesenians.destroy', $kesenian->id) }}" method="POST" style="display:inline-block;">
-                            @csrf
-                            @method('DELETE')
-                            <button type="submit" class="btn btn-danger btn-sm">Hapus</button>
-                        </form> --}}
-                                </td>
-                            </tr>
-                        @endforeach
+                        <tbody>
+                            @foreach ($objek as $row)
+                                <tr>
+                                    <td>{{ $loop->iteration }}</td>
+                                    <td>{{ $row->nama }}</td>
+                                    <td>{{ $row->deskripsi }}</td>
+                                    <td>
+                                        <span class="
+                                            @if ($row->status == 0)
+                                                bg-warning
+                                            @elseif ($row->status == 1)
+                                                bg-secondary
+                                            @elseif ($row->status == 2)
+                                                bg-success
+                                            @elseif ($row->status == 3)
+                                                bg-danger
+                                            @else
+                                                bg-light
+                                            @endif
+                                            text-white p-2 rounded
+                                        ">
+                                            @if ($row->status == 0)
+                                                Diajukan
+                                            @elseif ($row->status == 1)
+                                                Dicek
+                                            @elseif ($row->status == 2)
+                                                Diterima
+                                            @elseif ($row->status == 3)
+                                                Ditolak
+                                            @else
+                                                Tidak diketahui
+                                            @endif
+                                        </span>
+                                    </td>
+                                    <td>
+                                        <a href="{{ route('admin.pengajuans.show', $row->id) }}" class="btn btn-info btn-sm">Detail</a>
+                                    </td>
+                                </tr>
+                            @endforeach
                         </tbody>
                     </table>
                 </div>
-            @endsection
+            </div>
+        </div>
+    </div>
+@endsection

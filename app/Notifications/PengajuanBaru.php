@@ -1,34 +1,32 @@
 <?php
+
 namespace App\Notifications;
 
-use App\Models\Pengajuan;
 use Illuminate\Bus\Queueable;
-use Illuminate\Contracts\Queue\ShouldQueue;
-use Illuminate\Notifications\Messages\MailMessage;
 use Illuminate\Notifications\Notification;
+use Illuminate\Contracts\Queue\ShouldQueue;
 
-class PengajuanBaru extends Notification
+class PengajuanDiterima extends Notification implements ShouldQueue
 {
     use Queueable;
 
     protected $pengajuan;
 
-    public function __construct(PengajuanBaru $pengajuan)
+    public function __construct($pengajuan)
     {
         $this->pengajuan = $pengajuan;
     }
 
     public function via($notifiable)
     {
-        return ['mail'];
+        return ['mail']; // Pilih metode notifikasi sesuai kebutuhan
     }
 
     public function toMail($notifiable)
     {
-        return (new MailMessage)
-                    ->subject('Pengajuan Objek Budaya Baru')
-                    ->line('Ada pengajuan objek budaya baru.')
-                    ->action('Lihat Pengajuan', url('/admin/pengajuan/' . $this->pengajuan->id))
+        return (new \Illuminate\Notifications\Messages\MailMessage)
+                    ->line('Ada pengajuan baru dari masyarakat.')
+                    ->action('Lihat Pengajuan', url('/admin/pengajuan'))
                     ->line('Terima kasih telah menggunakan aplikasi kami!');
     }
 }

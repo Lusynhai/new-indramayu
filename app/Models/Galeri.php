@@ -1,30 +1,37 @@
 <?php
+
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
 class Galeri extends Model
 {
-    use HasFactory;
+    protected $table = 'galleries'; // Nama tabel yang sesuai di database
 
-    // Kolom yang bisa diisi
-    protected $fillable = ['tradisi_id', 'cagar_budaya_id', 'kesenian_id', 'file_path'];
+    // protected $fillable = [
+    //     'file_path', 'o'
+    // ];
 
-    public function tradisi()
-    {
-        return $this->belongsTo(Tradisi::class);
-    }
+//     public function objekBudaya()
+//     {
+//         return $this->belongsTo(ObjekBudaya::class, 'objek_budaya_id');
+//     // }
+// }
 
-    public function cagarBudaya()
-    {
-        return $this->belongsTo(CagarBudaya::class, 'cagar_budaya_id');
-    }
+public function wbtbnas()
+{
+    return $this->belongsTo(Wbtbnas::class);
+}
 
-    public function kesenian()
-    {
-        return $this->belongsTo(Kesenian::class, 'kesenian_id');
-    }
 
-    protected $table = 'galleries'; // Pastikan nama tabelnya benar
+public function wbtbprov()
+{
+    return $this->belongsTo(Wbtbprov::class);
+}
+
+public function wbtbkab()
+{
+    return $this->belongsTo(Wbtbkab::class);
+}
+
 }

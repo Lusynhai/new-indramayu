@@ -27,6 +27,7 @@
     <meta name="description" content="Responsive Bootstrap 5 Dashboard Template">
     <meta name="author" content="ThemePixels">
 
+    
     <link rel="shortcut icon" type="image/x-icon" href="{{ asset('template/admin/img/favicon.png') }}">
     <title>@yield('title', 'Disbud Indramayu')</title>
 

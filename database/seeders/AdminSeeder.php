@@ -12,8 +12,8 @@ class AdminSeeder extends Seeder
         // Menambahkan admin dengan data default
         User::create([
             'name' => 'Admin',
-            'email' => 'admin@disbud.com',
-            'password' => Hash::make('admindisbud'), // Gunakan password yang kuat
+            'email' => 'admin@gmail.com',
+            'password' => Hash::make('disbud123'), // Gunakan password yang kuat
         ]);
     }
 }

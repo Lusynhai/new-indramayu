@@ -1,17 +1,15 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-// use App\Http\Controllers\TradisiController;
-// use App\Http\Controllers\CagarBudayaController;
-// use App\Http\Controllers\RitusController;
-// use App\Http\Controllers\KesenianController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\GalleryController;
 use App\Http\Controllers\MasyarakatController;
 use App\Http\Controllers\PengajuanController;
 use App\Http\Controllers\AuthController;
-use App\Http\Controllers\KategoriController;
 use App\Http\Controllers\WBTakBendaController;
+use App\Http\Controllers\WBTBKabController;
+use App\Http\Controllers\WBTBNasController;
+use App\Http\Controllers\WBTBProvController;
 
 // Halaman utama
 Route::get('/', function () {
@@ -32,7 +30,10 @@ Route::post('/password/reset', [AuthController::class, 'resetPassword'])->name('
 // Rute untuk masyarakat (tanpa login)
 Route::prefix('masyarakat')->group(function() {
     Route::get('/', [MasyarakatController::class, 'index'])->name('masyarakat.index');
-    Route::get('/wbtb/{id}', [WBTakBendaController::class, 'showDetails'])->name('masyarakat.wbtb.detail');
+    Route::get('/masyarakat/wbtbnas/{id}', [WBTBNasController::class, 'showDetails'])->name('masyarakat.wbtbnas.detail');
+    Route::get('/masyarakat/wbtbprov/{id}', [WBTBProvController::class, 'showDetails'])->name('masyarakat.wbtbprov.detail');
+    Route::get('/masyarakat/wbtbkab/{id}', [WBTBKabController::class, 'showDetails'])->name('masyarakat.wbtbkab.detail');
+
 
 
     // Rute untuk pengajuan masyarakat (tanpa login)
@@ -48,14 +49,16 @@ Route::prefix('admin')->middleware('auth')->group(function() {
     })->name('admin.index');
 
     // Rute pengajuan admin
-    Route::get('/pengajuan', [PengajuanController::class, 'indexAdmin'])->name('pengajuan.index');
-    Route::post('/pengajuan/{id}/update-status', [PengajuanController::class, 'updateStatus'])->name('pengajuan.updateStatus');
+    Route::get('/pengajuans', [PengajuanController::class, 'indexAdmin'])->name('admin.pengajuans.index');
+    Route::get('/admin/pengajuans/{id}', [PengajuanController::class, 'showAdmin'])->name('admin.pengajuans.show');
+    Route::patch('/pengajuan/{id}/update-status', [PengajuanController::class, 'updateStatus'])->name('admin.pengajuans.updateStatus');
 
     // Rute untuk resources admin
-    Route::resource('wbtbs', WBTakBendaController::class);
+    Route::resource('wbtbnas', WBTBNasController::class);
+    Route::resource('wbtbprov', WBTBProvController::class);
+    Route::resource('wbtbkab', WBTBKabController::class);
     // Route::resource('kesenians', KesenianController::class);
-    Route::resource('pengajuans', PengajuanController::class);
-    Route::resource('kategori', KategoriController::class);
+    // Route::resource('pengajuans', PengajuanController::class);
 });
 
 // Route::get('tradisi/nasional', [TradisiController::class, 'indexNasional'])->name('tradisi.nasional');

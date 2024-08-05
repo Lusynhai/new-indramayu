@@ -30,3 +30,18 @@ body {
     min-height: 300px;
     padding: 20px;
 }
+
+.nav-item .sub-menu {
+    display: none;
+    list-style: none;
+    padding-left: 20px;
+}
+
+.nav-item:hover .sub-menu {
+    display: block;
+}
+
+.nav-item .sub-menu li {
+    margin-top: 10px;
+}
+
